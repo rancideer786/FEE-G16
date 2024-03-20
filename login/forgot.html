@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+   body{
+    font-family:'poppins',sans-serif;
+    font-size:20px;
+    background-color:rgba(174, 203, 255, 0.788);
+   }
+   h3{
+    background-color: bisque;
+   }
+   .conti{
+    max-width: 400px;
+      margin: auto;
+      padding: 25px;
+      border: 2px solid #100404;
+      background-color:rgba(246, 249, 251, 0.842);
+      border-radius: 4px;
+      box-shadow:5px 5px 10px #100404;
+      position: auto;
+   }
+   .conti input[type="text"],
+    .conti input[type="password"] {
+      width: 100%;
+      padding: 10px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #150606;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .conti button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 17px;
+      border-radius: 3px;
+    }
+    .conti a{
+        font-size: small;
+    }
+    </style>
+</head>
+<body>
+    <form action="/login.html" >
+
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <center>
+            <h3>Reset Password</h3>
+        </center>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="conti">
+            <!-- New Password -->
+            <label for="newPassword">New Password</label>
+            <input type="password" placeholder="Enter New Password" name="newPassword" required>
+
+            <!-- Confirm Password -->
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" name="confirmPassword" required>
+
+            <!-- Submit button -->
+            <button type="submit" onclick="forgot()">Reset Password</button>
+            <center>
+            <a href="login.html">Back to login page</a>
+        </center>
+        </div>
+
+    </form>
+</body>
+<script>
+    function forgot() {
+            var newPassword = document.getElementsByName('newPassword')[0].value;
+            var confirmPassword = document.getElementsByName('confirmPassword')[0].value;
+
+            if (newPassword !== confirmPassword) {
+                document.getElementsByName('newPassword')[0].value = "";
+                document.getElementsByName('confirmPassword')[0].value = "";
+                document.getElementsByName('newPassword')[0].focus();
+                alert('Entered password does not match ');
+            }
+            else if (newPassword === '' & confirmPassword === '') {
+                document.getElementsByName('newPassword')[0].value = "";
+                document.getElementsByName('confirmPassword')[0].value = "";
+                document.getElementsByName('newPassword')[0].focus();
+                alert('Enter password');
+            }
+            else {
+                alert('Password changed Sucessfully ');
+                window.location.href = '/login.html';
+            }
+        }
+</script>
+</html>

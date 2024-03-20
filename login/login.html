@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+   *{
+    padding: 0;
+    margin: 0;
+   }
+   body{
+    font-family:'Poppins',sans-serif;
+    font-size:20px;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 204, 214, 0.824);
+   }
+
+    .container {
+      margin-top: 100px;
+      width: 400px;
+      border: #150606 solid 1px;
+      border-radius: 10px;
+      align-content: center;
+      justify-content: center;
+      padding: 25px;
+     background-color: #ffffffcb;
+     box-shadow:5px 5px 10px #100404;
+      border-radius: 2px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom:15px;
+      font-weight: 200;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #150606;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .container button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 17px;
+      border-radius: 3px;
+    }
+    .signin{
+      font-size: .9em;
+      text-align: center;
+     /* margin: 25px 0 10px;*/
+    }
+    .signin p a{
+      font-weight: 600;
+    }
+    .container a{
+      font-size: small;
+    }
+  </style>
+</head>
+<body>
+  <center>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <div class="signin">
+        <p>Don't have an account <a href="signup.html">Sign up</a></p>
+      </div>
+      <center>
+      <div class="forgot">
+        <a href="forgot.html">Forgot Password?</a>
+      </div></center>
+    </form>
+  </div>
+</center>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the values entered by the user
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Retrieve the existing user array from local storage
+      var users = JSON.parse(localStorage.getItem('users')) || [];
+
+      // to Check if the entered username and password match any stored user
+      var authenticatedUser = users.find(function(user) {
+        return user.username === username && user.password === password;
+      });
+
+      if (authenticatedUser) {
+        alert('Login successful!');
+        localStorage.setItem("user",JSON.stringify(username));
+        window.location.href="./Homepage/index.html"
+        // Redirect to another page or perform any additional actions
+      } else {
+        alert('Invalid username or password. Please try again.');
+        // Clear the form fields
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+      }
+    });
+    
+  </script>
+</body>
+</html>

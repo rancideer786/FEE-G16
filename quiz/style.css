@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 100px auto;
+    width: 80%;
+}
+
+.question input[type="radio"] {
+    display: none;
+}
+
+body {
+    background-color: rgb(239, 202, 255);
+}
+
+.question p {
+    margin: 20px 0px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.question label {
+    display: inline-block;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    border-radius: 18px;
+    margin-right: 5px;
+    width: 200px;
+    height: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 88);
+    margin: 5px;
+}
+
+.question label:hover {
+    background-color: #5a099c;
+    color: #fff;
+}
+
+.question label.checked {
+    color: #fff;
+    border: 2px solid #746ce7;
+    background-color: #746ce7;
+}
+
+#submit {
+    margin: 25px 0px;
+    background-color:  rgb(161, 107, 107);
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px 18px;
+    color:black;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 15px 15px 15px;
+}
+
+#submit:hover {
+    background-color: rgb(91, 0, 144);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scoreTitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(124, 124, 253);
+}
+
+.score-result {
+    font-weight: bold;
+}
+
+.Result-Container {
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    height: max-content;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.Result-conclusion {
+    margin-top: 25px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

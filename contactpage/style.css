@@ -1,0 +1,77 @@
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255, 0, 106, 0.4);
+}
+
+#overlay form {
+    max-width: 550px;
+    width: 90%;
+    background: white;
+    margin: 17vh auto 0 auto;
+    padding: 40px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#overlay h1 {
+    margin: 0;
+    text-align: center;
+}
+
+#overlay label {
+    display: block;
+    margin: 20px 0;
+}
+
+#overlay input,
+#overlay textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+#overlay input[type="text"]:focus,
+#overlay textarea:focus {
+    border-bottom: 1px solid rgb(255, 0, 106);
+}
+
+#overlay textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+#overlay textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 0, 106);
+}
+
+#overlay .center {
+    text-align: center;
+}
+
+#overlay input[type="submit"] {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 200px;
+    background: linear-gradient(to right, rgb(255, 0, 106), rgb(255, 67, 61));
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#overlay .error {
+    color: red;
+}
+
+#overlay .error-border {
+    border-bottom: 1px solid red;
+}
+
+#overlay #success {
+    color: #28A745;
+}

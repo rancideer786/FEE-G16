@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">  </head>
+  <body>
+    <nav>
+      <div></div>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <a href="/index.html">Home</a>
+        <a href="/contactpage/index.html">Contact us </a>
+        <a href="/login/login.html">Login</a>
+      </ul></div>
+       <div>
+      <ul class="menu-nav">
+          <img src="pngwing.com.png" alt="logo">
+        <li><a href="#"><h3>SelfCare</h3></a></li>
+        <li class="hideOnMobile"><a href="/index.html"><p>Home</p></a></li>
+        <li class="hideOnMobile"><a href="/contactpage/index.html"><p>Contact Us</p></a></li>
+        <li class="hideOnMobile"><a href="/login/login.html"><p>Login</p></a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      </ul></div>
+    </nav>
+  
+    <div>
+ <center><h2>Daily Wisdom Quotes</h2></center>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <p id="quote">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+          magni.
+        </p>
+        <h3 id="author">Lorem, ipsum.</h3>
+        <button id="btn">NEXT</button>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

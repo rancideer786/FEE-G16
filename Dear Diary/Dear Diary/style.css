@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+   overflow-x: hidden;
+}
+body{
+  background: url("https://i.pinimg.com/564x/98/eb/b6/98ebb687e4f9d58cf00a281cbc5389a5.jpg"); 
+  background-size:cover;
+
+}
+main{
+  overflow-x: hidden;
+  display: flex;
+  width:500px;
+  box-shadow:3px 3px 15px #d284849e;
+  flex-direction: column;
+  background-color: rgba(248, 248, 241, 0.612);
+  justify-items: center;
+  border-radius: 10px;
+  align-items: center;
+}
+header{
+  color:black;
+  font-family: "fondamento";
+  padding:.5rem;
+  font-size:20px;
+  margin-top: 20px;
+  margin-bottom:15px;
+}
+.wrapper{
+  max-width:500px;
+  margin:0 auto;
+}
+.card{
+  padding:0.5 rem 1 rem;
+  border: 1px solid #eee;
+  border-radius:3px;
+  margin:3 rem 0;
+}
+.text-center{
+  text-align:center;
+}
+textarea{
+  width: 300px;
+  margin: 10px;
+  font-family: "poppins";
+  height: 400px;
+}
+.text-l{
+  text-align:left;
+}
+p{
+  color: rgb(62,62,62);
+  font-family:Arial, Helvetica, sans-serif;
+}
+small{
+  color:#575149;
+  
+}
+
+.abc{
+  background-color:#E9DFDB ;
+}
+.button{
+  background-color:#edb0ebd2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border-style: none;
+  font-size: 16px;
+  padding-left : 15px;
+  padding-right : 15px;
+  font-family: "poppins";
+  padding: 10px 10px;
+  margin: 20px;
+  }
+  .root{
+display: flex;
+  }
+  @media(max-width:425px){
+    main{
+      width: 250px;
+      margin: 10px;
+    }
+  }
